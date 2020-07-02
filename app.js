@@ -2,7 +2,7 @@ const fileUrl = './input.txt'
 
 fetch(fileUrl)
   .then(r => r.text())
-  .then(t => alert(polymerReduction(t.split(''))))
+  .then(t => document.querySelector('h2').innerHTML = polymerReduction(t.split('')))
 
 const polymerReduction = (arr) => {
   for (let i = 0; i < arr.length - 1; i++) {
@@ -17,3 +17,5 @@ const polymerReduction = (arr) => {
   }
   return arr.length
 }
+
+
